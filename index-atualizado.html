@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pães, salgados e doces caseiros feitos com carinho. Faça sua encomenda!">
+  <title>Pães e Salgados da Dedé</title>
+  <style>
+    :root { --brown:#603b2b; --cream:#fff8ed; --orange:#d97736; --green:#28734b; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, sans-serif; color:#38271f; background:var(--cream); }
+    header { background:linear-gradient(135deg,#6b3e2b,#a85d32); color:white; text-align:center; padding:48px 18px 42px; }
+    header h1 { font-size:clamp(2rem,6vw,3.2rem); margin:0 0 10px; }
+    header p { font-size:1.08rem; margin:0; }
+    .tag { display:inline-block; margin-top:18px; padding:8px 14px; border-radius:30px; background:#ffffff24; }
+    main { max-width:1000px; margin:auto; padding:32px 18px 50px; }
+    h2 { text-align:center; color:var(--brown); margin:0 0 22px; }
+    .intro { text-align:center; line-height:1.6; margin:0 auto 28px; max-width:650px; }
+    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    .card { background:white; border-radius:18px; padding:24px 20px; text-align:center; box-shadow:0 5px 18px #603b2b12; border:1px solid #f0e3d5; }
+    .emoji { font-size:3.2rem; }
+    .card h3 { color:var(--brown); margin:10px 0 6px; }
+    .price { font-size:1.35rem; font-weight:bold; color:var(--green); margin:12px 0 0; }
+    .order { text-align:center; background:#f4e5d3; padding:28px 18px; border-radius:18px; margin-top:30px; }
+    .button { display:inline-block; background:var(--green); color:white; text-decoration:none; font-weight:bold; padding:14px 22px; border-radius:30px; margin-top:10px; }
+    .button:hover { background:#1e5b3a; }
+    .note { color:#705d51; font-size:.92rem; margin-top:14px; }
+    footer { text-align:center; padding:22px 15px; color:#755d4e; font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🥖 Pães e Salgados da Dedé</h1>
+    <p>O sabor caseiro que deixa seu dia mais gostoso!</p>
+    <span class="tag">Feito com carinho • Por encomenda</span>
+  </header>
+
+  <main>
+    <h2>Nosso cardápio</h2>
+    <p class="intro">Confira nossas delícias! Faça sua encomenda pelo WhatsApp e consulte a disponibilidade.</p>
+
+    <section class="products" aria-label="Produtos">
+      <article class="card">
+        <div class="emoji" aria-hidden="true">🥖</div>
+        <h3>Pães</h3>
+        <p>Pães caseiros fresquinhos.</p>
+        <p class="price">R$ 15,00</p>
+      </article>
+      <article class="card">
+        <div class="emoji" aria-hidden="true">🥟</div>
+        <h3>Salgados</h3>
+        <p>Salgados preparados com carinho.</p>
+        <p class="price">R$ 20,00</p>
+      </article>
+      <article class="card">
+        <div class="emoji" aria-hidden="true">🍰</div>
+        <h3>Doces</h3>
+        <p>Doces caseiros para adoçar seu dia.</p>
+        <p class="price">R$ 50,00</p>
+      </article>
+    </section>
+
+    <section class="order">
+      <h2>Faça sua encomenda!</h2>
+      <p>Gostou? Clique abaixo para abrir o WhatsApp e enviar seu pedido.</p>
+      <a class="button" href="https://wa.me/554197540682?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20encomenda%20na%20P%C3%A3es%20e%20Salgados%20da%20Ded%C3%A9." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      <p class="note">As encomendas são feitas antecipadamente. Consulte os sabores e a disponibilidade.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Pães e Salgados da Dedé • Feito com carinho ❤️</footer>
+</body>
+</html>
