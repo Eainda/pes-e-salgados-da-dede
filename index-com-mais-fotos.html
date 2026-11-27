@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pães, salgados e doces caseiros feitos com carinho. Faça sua encomenda!">
+<title>Pães e Salgados da Dedé</title>
+<style>
+:root{--brown:#603b2b;--cream:#fff8ed;--green:#28734b}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:#38271f;background:var(--cream)}
+header{background:linear-gradient(135deg,#6b3e2b,#a85d32);color:white;text-align:center;padding:38px 18px 30px}
+header h1{font-size:clamp(2rem,6vw,3.1rem);margin:0 0 10px}
+header p{margin:0}
+.tag{display:inline-block;margin-top:16px;padding:8px 14px;border-radius:30px;background:#ffffff24}
+.navbar{position:relative;display:flex;align-items:center;justify-content:flex-end;background:#fff;padding:10px 18px;box-shadow:0 2px 10px #603b2b12}
+.menu-button{border:0;background:var(--brown);color:white;border-radius:8px;padding:9px 12px;font-size:25px;line-height:1;cursor:pointer}
+.menu{display:none;position:absolute;right:18px;top:58px;z-index:5;min-width:190px;background:white;border:1px solid #eadaca;border-radius:12px;box-shadow:0 8px 22px #0002;overflow:hidden}
+.menu.open{display:block}
+.menu a{display:block;padding:13px 16px;color:var(--brown);text-decoration:none;font-weight:bold}
+.menu a:hover{background:#f4e5d3}
+main{max-width:1000px;margin:auto;padding:30px 18px 48px}
+h2{text-align:center;color:var(--brown);margin:0 0 20px}
+.intro{text-align:center;line-height:1.6;margin:0 auto 26px;max-width:650px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;border-radius:18px;padding:22px 18px;text-align:center;box-shadow:0 5px 18px #603b2b12;border:1px solid #f0e3d5}
+.product-photo{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:10px}
+.emoji{font-size:3rem}
+.card h3{color:var(--brown);margin:10px 0 6px}
+.price{font-size:1.25rem;font-weight:bold;color:var(--green);margin:12px 0 0}
+.order,.payments{ text-align:center;background:#f4e5d3;padding:26px 18px;border-radius:18px;margin-top:28px}
+.button{display:inline-block;background:var(--green);color:white;text-decoration:none;font-weight:bold;padding:14px 22px;border-radius:30px;margin-top:10px}
+.note{color:#705d51;font-size:.92rem;margin-top:14px}
+.payment-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:18px}
+.payment-item{background:white;border:1px solid #eadaca;border-radius:12px;padding:14px 18px;min-width:125px;font-weight:bold;color:var(--brown)}
+.payment-item span{display:block;font-size:1.7rem;margin-bottom:6px}
+footer{text-align:center;padding:22px 15px;color:#755d4e;font-size:.9rem}
+</style>
+</head>
+<body>
+<header>
+<h1>🥖 Pães e Salgados da Dedé</h1>
+<p>O sabor caseiro que deixa seu dia mais gostoso!</p>
+<span class="tag">Feito com carinho • Por encomenda</span>
+</header>
+
+<nav class="navbar" aria-label="Menu principal">
+<button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+<div class="menu" id="menu">
+<a href="#cardapio" onclick="closeMenu()">Cardápio</a>
+<a href="#pagamentos" onclick="closeMenu()">Formas de pagamento</a>
+<a href="#encomendas" onclick="closeMenu()">Encomendas</a>
+</div>
+</nav>
+
+<main>
+<section id="cardapio">
+<h2>Nosso cardápio</h2>
+<p class="intro">Confira nossas delícias! Faça sua encomenda pelo WhatsApp e consulte a disponibilidade.</p>
+<div class="products" aria-label="Produtos">
+<article class="card"><img class="product-photo" src="pao.jpg" alt="Pão caseiro"><h3>Pães</h3><p>Pães caseiros fresquinhos.</p><p class="price">R$ 15,00</p></article>
+<article class="card"><img class="product-photo" src="salgado-cheddar.jpg" alt="Salgado com cheddar"><h3>Salgado com cheddar</h3><p>Preparado com carinho.</p><p class="price">R$ 15,00</p></article>
+<article class="card"><div class="emoji">🥟</div><h3>Coxinha frita</h3><p>Crocante e saborosa.</p><p class="price">R$ 40,00</p></article>
+<article class="card"><img class="product-photo" src="coxinha-congelada.jpg" alt="Coxinhas congeladas"><h3>Coxinha congelada</h3><p>Para preparar em casa.</p><p class="price">R$ 30,00</p></article>
+<article class="card"><div class="emoji">🥙</div><h3>Esfirra de frango</h3><p>Recheio de frango.</p><p class="price">R$ 15,00</p></article>
+<article class="card"><div class="emoji">🥙</div><h3>Esfirra de frango com requeijão</h3><p>Frango cremoso com requeijão.</p><p class="price">R$ 15,00</p></article>
+<article class="card"><div class="emoji">🥙</div><h3>Esfirra de calabresa</h3><p>Recheio de calabresa.</p><p class="price">R$ 15,00</p></article>
+<article class="card"><div class="emoji">🥙</div><h3>Esfirra de carne</h3><p>Recheio de carne.</p><p class="price">R$ 17,50</p></article>
+<article class="card"><div class="emoji">🥙</div><h3>Esfirra de presunto e queijo</h3><p>Combinação clássica.</p><p class="price">R$ 17,50</p></article>
+<article class="card"><div class="emoji">🧀</div><h3>Esfirra de queijo</h3><p>Recheio de queijo.</p><p class="price">R$ 17,50</p></article>
+<article class="card"><img class="product-photo" src="bolacha-goiaba.jpg" alt="Bolacha amanteigada com doce de goiaba"><h3>Bolacha amanteigada de goiaba</h3><p>Bolacha caseira amanteigada.</p><p class="price">R$ 5,00</p></article>
+<article class="card"><div class="emoji">🍪</div><h3>Bolacha amanteigada sem goiabada</h3><p>Bolacha caseira amanteigada.</p><p class="price">R$ 5,00</p></article>
+<article class="card"><div class="emoji">🍪</div><h3>Chineque de goiaba</h3><p>Doce caseiro.</p><p class="price">R$ 5,00</p></article>
+<article class="card"><div class="emoji">🍪</div><h3>Chineque de farofa</h3><p>Doce caseiro.</p><p class="price">R$ 5,00</p></article>
+</div>
+</section>
+
+<section class="payments" id="pagamentos">
+<h2>Formas de pagamento</h2>
+<p>Você pode pagar com:</p>
+<div class="payment-list">
+<div class="payment-item"><span>📱</span>Pix</div>
+<div class="payment-item"><span>💵</span>Dinheiro</div>
+<div class="payment-item"><span>💳</span>Cartão de débito</div>
+<div class="payment-item"><span>💳</span>Cartão de crédito</div>
+</div>
+</section>
+
+<section class="order" id="encomendas">
+<h2>Faça sua encomenda!</h2>
+<p>Gostou? Clique abaixo para abrir o WhatsApp e enviar seu pedido.</p>
+<a class="button" href="https://wa.me/554197540682?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20encomenda%20na%20P%C3%A3es%20e%20Salgados%20da%20Ded%C3%A9." target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+<p class="note">As encomendas são feitas antecipadamente. Consulte os sabores e a disponibilidade.</p>
+</section>
+</main>
+<footer>© 2026 Pães e Salgados da Dedé • Feito com carinho ❤️</footer>
+
+<script>
+function toggleMenu(){
+  const menu=document.getElementById('menu');
+  const button=document.querySelector('.menu-button');
+  const opened=menu.classList.toggle('open');
+  button.setAttribute('aria-expanded',String(opened));
+}
+function closeMenu(){
+  document.getElementById('menu').classList.remove('open');
+  document.querySelector('.menu-button').setAttribute('aria-expanded','false');
+}
+</script>
+</body>
+</html>
